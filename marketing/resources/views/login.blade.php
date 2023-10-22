@@ -57,7 +57,9 @@
                 <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
             </div>
+            
             <button type="submit" class="btn btn-block text-white mx-auto" style="margin-left: 20px;">Login</button>
+        
         </form>
         <!-- Add a line of text for registration -->
         <p class="text-center">

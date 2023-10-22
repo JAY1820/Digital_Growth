@@ -47,7 +47,7 @@
     <header>
         <nav>
             @include('header')
-    </nav>
+        </nav>
     </header>
 
     <div class="register-container">
@@ -55,20 +55,28 @@
         <form method="POST" action="{{ route('register') }}">
             @csrf
             <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="mb-3">
+                <label for="password_confirmation" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirm your password" required>
+            </div>
+            <div class="mb-3">
                 <label for="service_id" class="form-label">Service ID</label>
                 <input type="text" class="form-control" id="service_id" name="service_id" placeholder="Enter your service ID" required>
             </div>
             <div class="mb-3">
-                <label for="plan_name" class="form-label">Plan Name</label>
-                <input type="text" class="form-control" id="plan_name" name="plan_name" placeholder="Enter your plan name" required>
-            </div>
-            <div class="mb-3">
-                <label for="plan_description" class="form-label">Plan Description</label>
-                <textarea class="form-control" id="plan_description" name="plan_description" rows="4" placeholder="Enter your plan description" required></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="plan_price" class="form-label">Plan Price</label>
-                <input type="text" class="form-control" id="plan_price" name="plan_price" placeholder="Enter your plan price" required>
+                <label for="registration_date" class="form-label">Registration Date</label>
+                <input type="date" class="form-control" id="registration_date" name="registration_date">
             </div>
             <button type="submit" class="btn btn-block text-white mx-auto">Register</button>
         </form>
