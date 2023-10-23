@@ -29,15 +29,36 @@
                 <li>
                     <a href="/aboutus" class="navbar-link" data-nav-link>About Us</a>
                 </li>
-                <li>
-                    <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
-                </li>
+
+                <!-- <li>
+                    <a href="/blog" class="navbar-link" data-nav-link>Blog</a>
+                </li> -->
                 <li>
                     <a href="/contactus" class="navbar-link" data-nav-link>Contact Us</a>
                 </li>
-                <li>
-                    <a href="/login" class="btn btn-primary">login</a>
-                </li>
+
+                 @guest
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="{{ route('login') }}">Login</a>
+                    </li>
+                    
+                @else
+                    <li class="nav-item">
+                        <a class="navbar-link" href="{{ route('addtocart') }} ">Join With Us</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="">Profile</a>
+                    </li> -->
+                    @auth
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button class="btn btn-primary" type="submit">Logout</button>
+                    </form>
+                 @endauth
+                @endguest
+
+
+
             </ul>
         </nav>
         <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>

@@ -23,9 +23,7 @@
           <h2 class="h2 section-title">Let's Contact With Us</h2>
 
           <p class="section-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna
-            aliqua.
+             We are eager to assist you in your journey towards digital growth and success.
           </p>
 
           <form action="" class="contact-form">
@@ -84,8 +82,7 @@
                 <div class="card-content">
                   <h3 class="h3 card-title">Visit Here</h3>
                   <address class="card-address">
-                    Mumbai , Maharashtra<br>
-                    India - 400001
+                    Mumbai ,India - 400001<br>
                   </address>
                 </div>
               </div>
@@ -98,7 +95,6 @@
                 <div class="card-content">
                   <h3 class="h3 card-title">Call Here</h3>
                   <a href="tel:+1234567890" class="card-link">+123 456 7890</a>
-                  <a href="tel:+2414524526" class="card-link">+241 452 4526</a>
                 </div>
 
               </div>

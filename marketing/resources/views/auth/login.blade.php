@@ -1,7 +1,9 @@
 <x-guest-layout>
+
+
     <x-authentication-card>
         <x-slot name="logo">
-            <x-authentication-card-logo />
+            <!-- <x-authentication-card-logo /> -->
         </x-slot>
 
         <x-validation-errors class="mb-4" />
@@ -42,7 +44,17 @@
                 <x-button class="ml-4">
                     {{ __('Log in') }}
                 </x-button>
+
+                
             </div>
         </form>
+       
+        <a href="{{ route('register') }}" style="display: flex; justify-content: center;">
+    <x-button class="ml-4">
+        {{ __('Register new') }}
+    </x-button>
+</a>
+
+
     </x-authentication-card>
 </x-guest-layout>

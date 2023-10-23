@@ -60,6 +60,7 @@
             
             <button type="submit" class="btn btn-block text-white mx-auto" style="margin-left: 20px;">Login</button>
         
+            
         </form>
         <!-- Add a line of text for registration -->
         <p class="text-center">
