@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-use App\Service; // Import the Service model
+use App\Models\Service; // Import the Service model
+// use App\Service; 
 
 class ServiceController extends Controller
 {
@@ -15,15 +15,14 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'name' => 'required|string|max:255',
-            'description' => 'required|string',
-            'price' => 'required|numeric',
+            'service_id' => 'required|string|max:255',
+            'plan_name' => 'required|string',
+            'plan_description' => 'required|string',
+            'plan_price' => 'required|numeric',
         ]);
 
         Service::create($data); // Store the data in the "service" table
 
         return redirect()->route('addtocart'); // Redirect to the form page
     }
-
-    // You can add more methods for other controller actions as needed
 }
